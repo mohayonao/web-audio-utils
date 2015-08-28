@@ -1,7 +1,7 @@
 {
   "name": "@mohayonao/web-audio-utils",
   "description": "Utility functions for Web Audio API",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "mohayonao <mohayonao@gmail.com>",
   "bugs": {
     "url": "https://github.com/mohayonao/web-audio-utils/issues"
@@ -14,7 +14,8 @@
     "istanbul": "^0.3.18",
     "mocha": "^2.2.5",
     "power-assert": "^1.0.0",
-    "sinon": "^1.16.1"
+    "sinon": "^1.16.1",
+    "web-audio-test-api": "^0.3.6"
   },
   "files": [
     "package.json",
@@ -28,7 +29,7 @@
   },
   "scripts": {
     "cover": "istanbul cover --report text --report html _mocha",
-    "lint": "eslint . test",
+    "lint": "eslint ./*.js test",
     "prepublish": "npm run lint && npm run test",
     "test": "mocha --require intelli-espower-loader",
     "travis": "npm run lint && npm run test"
