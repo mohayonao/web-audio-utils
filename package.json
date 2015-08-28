@@ -7,11 +7,30 @@
     "url": "https://github.com/mohayonao/web-audio-utils/issues"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^1.2.1",
+    "espower-loader": "^1.0.0",
+    "intelli-espower-loader": "^1.0.0",
+    "istanbul": "^0.3.18",
+    "mocha": "^2.2.5",
+    "power-assert": "^1.0.0",
+    "sinon": "^1.16.1"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "*.js"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mohayonao/web-audio-utils/"
   },
-  "scripts": {}
+  "scripts": {
+    "cover": "istanbul cover --report text --report html _mocha",
+    "lint": "eslint . test",
+    "prepublish": "npm run lint && npm run test",
+    "test": "mocha --require intelli-espower-loader",
+    "travis": "npm run lint && npm run test"
+  }
 }
