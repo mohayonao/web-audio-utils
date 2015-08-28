@@ -13,5 +13,11 @@ Node.js
 npm install @mohayonao/web-audio-utils
 ```
 
+## API
+
+- `enableMobileAutoPlay(audioContext: AudioContext): void`
+- `fetchAudioBuffer(audioContext: AudioContext, path: string): Promise<AudioBuffer>`
+- `getAudioContext(): AudioContext`
+
 ## License
 MIT
