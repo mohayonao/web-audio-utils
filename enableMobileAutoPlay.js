@@ -1,3 +1,5 @@
+var getAudioContext = require("./getAudioContext");
+
 /* eslint-disable no-unused-vars */
 
 module.exports = function(audioContext) {
@@ -6,6 +8,8 @@ module.exports = function(audioContext) {
   if (!("ontouchstart" in global)) {
     return;
   }
+
+  audioContext = audioContext || getAudioContext();
 
   function choreFunction() {
     var bufSrc = audioContext.createBufferSource();
