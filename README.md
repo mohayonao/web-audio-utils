@@ -15,6 +15,7 @@ npm install @mohayonao/web-audio-utils
 
 ## API
 
+- `enableCustomAudioNode(): void`
 - `enableMobileAutoPlay([ audioContext: AudioContext ]): void`
 - `fetchAudioBuffer(path: string, [ audioContext: AudioContext ]): Promise<AudioBuffer>`
 - `getAudioContext(): AudioContext`
