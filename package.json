@@ -23,6 +23,7 @@
     "*.js"
   ],
   "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mohayonao/web-audio-utils/"
