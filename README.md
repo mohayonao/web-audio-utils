@@ -15,10 +15,12 @@ npm install @mohayonao/web-audio-utils
 
 ## API
 
+- `createAudioBufferFromArray(array: Float32Array[], [ audioContext: AudioContext ]): AudioBuffer`
 - `enableCustomAudioNode(): void`
 - `enableMobileAutoPlay([ audioContext: AudioContext ]): void`
 - `fetchAudioBuffer(path: string, [ audioContext: AudioContext ]): Promise<AudioBuffer>`
 - `getAudioContext(): AudioContext`
+- `splitAudioBuffer(audioBuffer: AudioBuffer, n: number): AudioBuffer[]`
 
 ## License
 MIT
