@@ -15,11 +15,16 @@ npm install @mohayonao/web-audio-utils
 
 ## API
 
-- `createAudioBufferFromArray(array: Float32Array[], [ audioContext: AudioContext ]): AudioBuffer`
+- `createAudioBufferFromArray(array: Float32Array[], [ audioContext ]): AudioBuffer`
+- `createPeriodicWave(wave: object, [ audioContext ]): PeriodicWave`
+  - `wave: { real: Float32Array, imag: Float32Array}`
+  - this function is for [wave-tables](https://github.com/mohayonao/wave-tables).
 - `enableCustomAudioNode(): void`
-- `enableMobileAutoPlay([ audioContext: AudioContext ]): void`
-- `fetchAudioBuffer(path: string, [ audioContext: AudioContext ]): Promise<AudioBuffer>`
+- `enableMobileAutoPlay([ audioContext, callback ]): void`
+- `fetchAudioBuffer(path: string, [ audioContext ]): Promise<AudioBuffer>`
+  - fetch && decode
 - `getAudioContext(): AudioContext`
+  - return an AudioContext as singleton
 - `splitAudioBuffer(audioBuffer: AudioBuffer, n: number): AudioBuffer[]`
 
 ## License
