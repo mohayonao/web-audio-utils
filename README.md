@@ -20,7 +20,7 @@ npm install @mohayonao/web-audio-utils
   - `wave: { real: Float32Array, imag: Float32Array}`
   - this function is for [wave-tables](https://github.com/mohayonao/wave-tables).
 - `enableCustomAudioNode(): void`
-- `enableMobileAutoPlay([ audioContext, callback ]): void`
+- `enableMobileAutoPlay([ audioContext, callback ]): AudioContext`
 - `fetchAudioBuffer(path: string, [ audioContext ]): Promise<AudioBuffer>`
   - fetch && decode
 - `getAudioContext(): AudioContext`
