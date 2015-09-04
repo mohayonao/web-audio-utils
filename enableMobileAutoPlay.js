@@ -9,7 +9,7 @@ module.exports = function(audioContext, callback) {
     if (typeof callback === "function") {
       setTimeout(callback, 0);
     }
-    return;
+    return audioContext;
   }
 
   audioContext = audioContext || getAudioContext();
@@ -35,4 +35,6 @@ module.exports = function(audioContext, callback) {
   }
 
   global.addEventListener("touchstart", choreFunction);
+
+  return audioContext;
 };
