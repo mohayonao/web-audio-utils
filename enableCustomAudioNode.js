@@ -23,7 +23,9 @@ function disconnect() {
 }
 
 module.exports = function() {
-  if (typeof AudioNode !== "undefined" && AudioNode.prototype.connect !== connect) {
+  if (!global.__WebAudioUtils$enableCustomAudioNode) {
+    global.__WebAudioUtils$enableCustomAudioNode = true;
+
     AudioNode$connect = AudioNode.prototype.connect;
     AudioNode$disconnect = AudioNode.prototype.disconnect;
 
