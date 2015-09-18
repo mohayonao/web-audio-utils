@@ -5,7 +5,7 @@ var getAudioContext = require("./getAudioContext");
 module.exports = function(audioContext, callback) {
   var memo = null;
 
-  if (!("ontouchstart" in global)) {
+  if (!("touchend" in global)) {
     if (typeof callback === "function") {
       setTimeout(callback, 0);
     }
@@ -31,10 +31,10 @@ module.exports = function(audioContext, callback) {
     };
     memo = bufSrc;
 
-    global.removeEventListener("touchstart", choreFunction);
+    global.removeEventListener("touchend", choreFunction);
   }
 
-  global.addEventListener("touchstart", choreFunction);
+  global.addEventListener("touchend", choreFunction);
 
   return audioContext;
 };
