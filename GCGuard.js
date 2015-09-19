@@ -10,4 +10,7 @@ module.exports = {
   remove: function(node) {
     removeIfExists(memo, node);
   },
+  dispose: function() {
+    return memo.splice(0);
+  },
 };
