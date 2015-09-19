@@ -5,7 +5,7 @@ var getAudioContext = require("./getAudioContext");
 module.exports = function(audioContext, callback) {
   var memo = null;
 
-  if (!("touchend" in global)) {
+  if (!("ontouchend" in global)) {
     if (typeof callback === "function") {
       setTimeout(callback, 0);
     }
