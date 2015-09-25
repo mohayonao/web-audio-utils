@@ -22,14 +22,14 @@ function disconnect() {
   }
 }
 
-module.exports = function() {
-  if (!global.__WebAudioUtils$enableCustomAudioNode) {
-    global.__WebAudioUtils$enableCustomAudioNode = true;
+if (!global.__WebAudioUtils$enableCustomAudioNode) {
+  global.__WebAudioUtils$enableCustomAudioNode = true;
 
-    AudioNode$connect = AudioNode.prototype.connect;
-    AudioNode$disconnect = AudioNode.prototype.disconnect;
+  AudioNode$connect = AudioNode.prototype.connect;
+  AudioNode$disconnect = AudioNode.prototype.disconnect;
 
-    AudioNode.prototype.connect = connect;
-    AudioNode.prototype.disconnect = disconnect;
-  }
-};
+  AudioNode.prototype.connect = connect;
+  AudioNode.prototype.disconnect = disconnect;
+}
+
+module.exports = function() {};
