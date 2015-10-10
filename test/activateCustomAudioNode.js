@@ -1,5 +1,5 @@
 var assert = require("power-assert");
-var enableCustomAudioNode = require("../enableCustomAudioNode");
+var activateCustomAudioNode = require("../activateCustomAudioNode");
 
 function CustomAudioNode(audioContext) {
   this.audioContext = audioContext;
@@ -27,12 +27,12 @@ CustomAudioNode.prototype.__disconnectFrom = function(source) {
   source.disconnect();
 };
 
-describe("enableCustomAudioNode(): void", function() {
+describe("activateCustomAudioNode(): void", function() {
   before(function() {
     this.AudioNode$connect = global.AudioNode.prototype.connect;
     this.AudioNode$disconnect = global.AudioNode.prototype.disconnect;
 
-    enableCustomAudioNode();
+    activateCustomAudioNode();
   });
   after(function() {
     global.AudioNode.prototype.connect = this.AudioNode$connect;

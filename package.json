@@ -1,7 +1,7 @@
 {
   "name": "@mohayonao/web-audio-utils",
   "description": "Utility functions for Web Audio API",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "author": "mohayonao <mohayonao@gmail.com>",
   "bugs": {
     "url": "https://github.com/mohayonao/web-audio-utils/issues"
