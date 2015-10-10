@@ -1,3 +1,6 @@
+var activateCustomAudioNode = require("./activateCustomAudioNode");
+var activateMobileAutoPlay = require("./activateMobileAutoPlay");
+var activateWebAudioAPI = require("./activateWebAudioAPI");
 var createAudioBufferFromArray = require("./createAudioBufferFromArray");
 var createPeriodicWave = require("./createPeriodicWave");
 var enableCustomAudioNode = require("./enableCustomAudioNode");
@@ -8,6 +11,9 @@ var getAudioContext = require("./getAudioContext");
 var splitAudioBuffer = require("./splitAudioBuffer");
 
 module.exports = {
+  activateCustomAudioNode: activateCustomAudioNode,
+  activateMobileAutoPlay: activateMobileAutoPlay,
+  activateWebAudioAPI: activateWebAudioAPI,
   createAudioBufferFromArray: createAudioBufferFromArray,
   createPeriodicWave: createPeriodicWave,
   enableCustomAudioNode: enableCustomAudioNode,
